@@ -1,0 +1,513 @@
+\documentclass{beamer}
+%\documentclass{intbeamer}
+
+% ===== packages =====
+\usepackage{etex}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning, shadows, shapes}
+\usepackage{amssymb}
+
+
+
+% ===== beamer options =====
+\setbeamertemplate{navigation symbols}{}
+\graphicspath{{./figs/}}
+
+% ===== titlepage info =====
+\title[Towards Open Science in Acoustics]{\huge Towards Open Science \\ in Acoustics}
+\subtitle{Foundations and Best Practices}
+
+\author[Spors et al.]{Sascha Spors~$^1$, Matthias Geier~$^1$ and Hagen Wierstorf~$^2$}
+
+\institute[]{$^1$ Institute of Communications Engineering, University of Rostock \\
+$^2$ Filmuniversität Babelsberg \emph{KONRAD WOLF}}
+
+\date[7.3.2017]{Jahrestagung der Deutschen Gesellschaft für Akustik \\ 7.3.2017 \\[4ex] \includegraphics[scale=.5]{CC_BY4png.png}}
+
+% ===== macros =====
+\tikzstyle{box}=[draw=structure.fg!60, fill=structure.fg!50, thick, drop shadow, rounded corners=4pt, minimum width=35mm, minimum height=17mm, anchor=east]
+\tikzstyle{box2}=[draw=structure.fg!60, fill=structure.fg!50, thick, drop shadow, rounded corners=4pt, minimum width=35mm, minimum height=12mm, anchor=east]
+
+\newcommand\data[1]{{\color{structure.fg}#1}}
+
+\newcommand\OSstamp[1]{%
+\begin{tikzpicture}
+\node[box2] (methodology) {#1};
+\end{tikzpicture}}
+
+\newcommand\OM{\OSstamp{Open Methodology}}
+\newcommand\OS{\OSstamp{Open Source}}
+\newcommand\OD{\OSstamp{Open Data}}
+\newcommand\OA{\OSstamp{Open Access}}
+\newcommand\OPR{\OSstamp{Open Peer Review}}
+
+
+
+
+% =============================================================================
+% =============================================================================
+\begin{document}
+
+\maketitle
+
+% =============================================================================
+\begin{frame}{Who Should Benefit from my Research?}
+
+\begin{columns}[T]
+\begin{column}{.55\linewidth}
+
+\begin{itemize}
+\item[$\square$] myself
+\item[$\square$] my future self
+\item[$\square$] my boss
+\item[$\square$] my colleagues
+\item[$\square$] other researchers
+\item[$\square$] all people in the world
+\item[$\square$] science itself
+\end{itemize}
+
+\end{column}
+%
+\begin{column}{.35\linewidth}
+
+\begin{tikzpicture}
+\draw[shading = axis, top color=structure.fg!30!white, bottom color=structure.fg] (-.75,-5) -- (.75,-5) -- (0,0) -- cycle;
+\node at (1.75,-2.5) {\shortstack{Ease of \\ Reproducibility}};
+\end{tikzpicture}
+
+\end{column}
+\end{columns}
+
+\end{frame}
+
+
+% =============================================================================
+\begin{frame}{Reproducibility of a Listening Experiment}
+\framesubtitle{1. Idea}
+
+
+\includegraphics[scale=.2]{./figs/Bright-Idea-800px}
+
+{\tiny from https://openclipart.org/}
+
+\end{frame}
+
+% =============================================================================
+\begin{frame}[noframenumbering]{Reproducibility of a Listening Experiment}
+\framesubtitle{2. Design of Experiment}
+
+\begin{columns}
+\begin{column}{.45\linewidth}
+\begin{itemize}
+\item hypothesis
+\item design of listening experiment
+\end{itemize}
+\end{column}
+%
+\begin{column}{.45\linewidth}
+\OM
+\end{column}
+\end{columns}
+
+\end{frame}
+
+
+% =============================================================================
+\begin{frame}[noframenumbering]{Reproducibility of a Listening Experiment}
+\framesubtitle{3. Computation and Implementation}
+
+\begin{columns}
+\begin{column}{.45\linewidth}
+\begin{itemize}
+\item mathematical derivations
+\item implementation of simulations, signal processing
+\item implementation of control logic, graphical user interface
+\end{itemize}
+
+\begin{itemize}
+\item numerical simulations
+\item generation of stimuli
+\end{itemize}
+\end{column}
+%
+\begin{column}{.45\linewidth}
+\OD
+\vspace{5mm}
+\OS
+\end{column}
+\end{columns}
+\end{frame}
+
+
+% =============================================================================
+\begin{frame}[noframenumbering]{Reproducibility of a Listening Experiment}
+\framesubtitle{4. Experiment}
+
+\begin{columns}
+\begin{column}{.45\linewidth}
+Illustration of experiment...
+
+Output: raw data
+\end{column}
+%
+\begin{column}{.45\linewidth}
+\OD
+\end{column}
+\end{columns}
+
+
+
+\end{frame}
+
+
+% =============================================================================
+\begin{frame}[noframenumbering]{Reproducibility of a Listening Experiment}
+\framesubtitle{5. Analysis}
+
+\begin{columns}
+\begin{column}{.45\linewidth}
+\begin{itemize}
+\item anonymization of data
+\item outlier removal
+\item statistical analysis
+\end{itemize}
+
+Output: processed data
+\end{column}
+%
+\begin{column}{.45\linewidth}
+\OM
+\vspace{5mm}
+\OD
+\vspace{5mm}
+\OS
+\end{column}
+\end{columns}
+
+\end{frame}
+
+
+% =============================================================================
+\begin{frame}[noframenumbering]{Reproducibility of a Listening Experiment}
+\framesubtitle{6. Manuscript}
+
+\begin{columns}
+\begin{column}{.45\linewidth}
+\begin{itemize}
+\item text
+\item references
+\item visualization of results (plots)
+\item supplementary material
+\end{itemize}
+\end{column}
+%
+\begin{column}{.45\linewidth}
+\OS
+\vspace{5mm}
+\OA
+\end{column}
+\end{columns}
+
+\end{frame}
+
+% =============================================================================
+\begin{frame}[noframenumbering]{Reproducibility of a Listening Experiment}
+\framesubtitle{7. Pre-Publication Peer Review}
+
+\begin{columns}
+\begin{column}{.45\linewidth}
+\begin{itemize}
+\item ratings, comments
+\item revision of manuscript
+\end{itemize}
+\end{column}
+%
+\begin{column}{.45\linewidth}
+\OPR
+\end{column}
+\end{columns}
+
+\end{frame}
+
+% =============================================================================
+\begin{frame}[noframenumbering]{Reproducibility of a Listening Experiment}
+\framesubtitle{8. Publication}
+
+\begin{columns}
+\begin{column}{.45\linewidth}
+\includegraphics[page=1,width=120pt]{/Users/spors/Documents/publications/published/DAGA_2015/paper/DAGA2015_WFS_edge_effects.pdf}
+\end{column}
+%
+\begin{column}{.45\linewidth}
+\OA
+\end{column}
+\end{columns}
+
+\end{frame}
+
+% =============================================================================
+\begin{frame}[noframenumbering]{Reproducibility of a Listening Experiment}
+\framesubtitle{9. Aftermath}
+
+\begin{columns}
+\begin{column}{.45\linewidth}
+\begin{itemize}
+\item reproduction by third parties
+\item post-publication review
+\item errata, code revision
+\end{itemize}
+\end{column}
+%
+\begin{column}{.45\linewidth}
+\OA
+\end{column}
+\end{columns}
+
+\end{frame}
+
+
+% =============================================================================
+\begin{frame}{The Scientific Method}
+
+\textbf{Branches of the Scientific Method} {\tiny [Donoho 2009]}
+\begin{enumerate}
+\item deductive $\rightarrow$ mathematics, formal logic
+%
+\item empirical $\rightarrow$ statistical analysis of controlled experiments
+%
+\item computational
+\begin{itemize}
+\item large-scale simulations
+\item data-driven computational science
+\end{itemize}
+\end{enumerate}
+
+\vfill
+
+\textbf{Types of Reproducibility} {\tiny [Stodden 2014a]}
+\begin{itemize}
+\item empirical reproducibility
+\item computational reproducibility
+\item statistical reproducibility
+\end{itemize}
+
+\end{frame}
+
+
+% =============================================================================
+\begin{frame}{Open Science}
+
+
+\begin{tikzpicture}[node distance=5mm and 2mm]
+\node[box] (methodology) {Open Methodology};
+\node[box, right=of methodology] (data) {Open Data};
+\node[box, right=of data] (source) {Open Source};
+\node[box, below=of methodology] (access) {Open Access};
+\node[box, below=of data] (edu) {\shortstack{Open Educational \\ Resources}};
+\node[box, below=of source] (review) {Open Peer Review};
+\end{tikzpicture}
+
+\vspace{2mm}
+{\tiny adapted from [\url{https://en.wikipedia.org/wiki/Open_science}, \url{http://openscienceasap.org/open-science/]}}
+
+\end{frame}
+
+
+% =============================================================================
+\begin{frame}{Reproducibility of a Listening Experiment Revisited}
+
+
+\end{frame}
+
+
+% =============================================================================
+\begin{frame}{Incentives and Barriers}
+\framesubtitle{Selected Results from a Survey of the Machine Learning Community}
+
+\textbf{Barriers}(\data{Data}/Code) {\tiny [Stodden 2010], N=134}
+\begin{itemize}
+\item time to document and clean up (\data{54}/77 \%)
+\item dealing with questions from users (\data{34}/52 \%)
+\item not receiving attribution (\data{44}/42 \%)
+\item possibility of patents (\data{--}/40 \%)
+\item legal barriers (e.g. copyright) (\data{34}/41 \%)
+\end{itemize}
+
+\vspace{3mm}
+
+\textbf{Incentives}(\data{Data}/Code)
+\begin{itemize}
+\item encourage scientific advancement (\data{81}/91 \%)
+\item encourage sharing in others (\data{90}/79 \%)
+\item be a good community member (\data{86}/79 \%)
+\item set a standard in the field (\data{82}/76 \%)
+\item improve the calibre of research (\data{85}/74 \%)
+\end{itemize}
+
+\end{frame}
+
+
+% =============================================================================
+\begin{frame}{Management of Research Data}
+
+\begin{itemize}
+\item systematic management of research data is a prerequisite for open \\ and reproducible science
+\item becoming mandatory in funding schemes (DFG, Horizon 2020, NSF, ...)
+\end{itemize}
+
+\vfill
+
+\textbf{Principles} {\tiny [DFG 2013, HRK 2014, Stodden 2014b, H2020 2016]}
+\begin{itemize}
+\item develop a comprehensive data management plan
+\item use workflow tracking in the research process
+\item make data findable, accessible, interoperable and reusable (FAIR)
+\item apply open licensing models
+\item offer training and qualification
+\end{itemize}
+
+\end{frame}
+
+
+% =============================================================================
+\begin{frame}{Public Services for Open Science}
+
+\begin{columns}[T]
+\begin{column}{.45\linewidth}
+\textbf{Generic Repositories}
+\begin{itemize}
+\item GitHub
+\item Bitbucket
+\end{itemize}
+\end{column}
+%
+\begin{column}{.45\linewidth}
+\textbf{Repositories for Research Data}
+\begin{itemize}
+\item Zenodo
+\item runmycode
+\item datahub
+\end{itemize}
+\end{column}
+\end{columns}
+
+\vfill
+
+\textbf{Virtual Research Environments}
+\begin{itemize}
+\item Open Science Framework (OSF)
+\item gCUBE
+\item hubzero
+\end{itemize}
+
+\vfill
+
+\textbf{Journals}
+\begin{itemize}
+\item Open Science Journal
+\item Journal of Open Research Software
+\end{itemize}
+
+\end{frame}
+
+
+% =============================================================================
+\begin{frame}{Copyright and Licenses}
+
+
+\begin{itemize}
+\item unclear situation when publishing data without explicit license
+\item license should be as open as possible in order to promote re-use
+\item legal implications are complex and hard to oversee
+\end{itemize}
+
+\vfill
+
+\textbf{Available Licensing Frameworks}
+\begin{itemize}
+\item Software: GNU Public License, BSD, MIT, ...
+\item Content: Creative Commons, ...
+\end{itemize}
+
+\textbf{Recommendations}
+\begin{itemize}
+\item Reproducible Research Standard (RRS) [Stodden, 2009]
+\end{itemize}
+
+\end{frame}
+
+
+% =============================================================================
+\begin{frame}{Personal Experience}
+
+\begin{itemize}
+\item public release of the SoundScape Renderer (SSR) in 2010
+\item various toolboxes, datasets, open educational resources
+\item internal data management: Redmine, svn, git
+\item public releases: github, zenodo, wordpress
+\end{itemize}
+
+\vfill
+
+\textbf{Benefits}
+\begin{itemize}
+\item documentation/clean up/discussions for public release
+\item bug reports
+\item positive community feedback
+\item potentially more citations {\tiny [?]}
+\end{itemize}
+
+\textbf{Challenges}
+\begin{itemize}
+\item initial effort (training, ...)
+\item missing versioning tool/platform for (large) data bases
+\end{itemize}
+
+\end{frame}
+
+
+% =============================================================================
+\begin{frame}{Conclusions}
+
+\begin{itemize}
+\item reproducibility of results is essential for the scientific method
+\item Open Science by itself does not ensure the ease of reproducibility
+\item evaluation measures contradict scientific innovation
+\item training and qualification is essential
+\end{itemize}
+
+\vfill
+
+{\large
+\url{https://github.com/spatialaudio}\\[1ex]
+\url{https://github.com/twoears}\\[1ex]
+\url{http://spatialaudio.net}
+}
+
+\end{frame}
+
+
+% =============================================================================
+\begin{frame}{References}
+
+{\scriptsize
+\begin{description}
+\item[{[Donoho 2009]}] David Donoho, Arian Maleki, Inam Rahman, Morteza Shahram, Victoria Stodden, 15 Years of Reproducible Research in Computational Harmonic Analysis, Computing in Science and Engineering, 11(1), 2009.
+\item[{[DFG 2013]}] Sicherung guter wissenschaftlicher Praxis, Deutsche Forschungsgemeinschaft, 2013. 
+\item[{[HRK 2014]}] Hochschulrektorenkonferenz. Management von Forschungsdaten - eine zentrale strategische Herausforderung für Hochschulleitungen, 13.5.2014.
+\item[{[H2020 2016]}] H2020 Programme: Guidelines of FAIR Data Management in Horizon 2020, European Research Commission, 26.7.2016.
+\item[{[Stodden 2009]}] Vitoria Stodden, The Legal Framework for Reproducible Scientific Research, Computing in Science \& Engineering, January/February 2009.
+\item[{[Stodden 2010]}]
+\item[{[Stodden 2014a]}] Victoria Stodden, Resolving Reproducibility in Computational Science: Tools, Policy, and Culture, talk, 8.10.2014.
+\item[{[Stodden 2014b]}] Victoria Stodden and Sheila Miguez, Best Practices for Computational Science: Software Infrastructure and Environments for Reproducible and Extensible Research, Journal of Open Reserach Software, 2(1):e21, pp. 1-6.
+
+
+\end{description}
+}
+
+\end{frame}
+
+
+\end{document}
