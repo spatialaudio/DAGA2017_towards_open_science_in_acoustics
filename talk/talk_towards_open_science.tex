@@ -1,5 +1,5 @@
-\documentclass{beamer}
-%\documentclass{intbeamer}
+%\documentclass{beamer}
+\documentclass{intbeamer}
 
 % ===== packages =====
 \usepackage{etex}
@@ -16,8 +16,7 @@
 \graphicspath{{./figs/}}
 
 % ===== titlepage info =====
-\title[Towards Open Science in Acoustics]{\huge Towards Open Science \\ in Acoustics}
-\subtitle{Foundations and Best Practices}
+\title[Towards Open Science in Acoustics]{\huge Towards Open Science \\ in Acoustics \\[.5ex] \normalsize Foundations and best practices}
 
 \author[Spors et al.]{Sascha Spors~$^1$, Matthias Geier~$^1$ and Hagen Wierstorf~$^2$}
 
@@ -72,11 +71,6 @@ $^2$ Filmuniversität Babelsberg \emph{KONRAD WOLF}}
 %
 \begin{column}{.35\linewidth}
 
-\begin{tikzpicture}
-\draw[shading = axis, top color=structure.fg!30!white, bottom color=structure.fg] (-.75,-5) -- (.75,-5) -- (0,0) -- cycle;
-\node at (1.75,-2.5) {\shortstack{Ease of \\ Reproducibility}};
-\end{tikzpicture}
-
 \end{column}
 \end{columns}
 
@@ -84,19 +78,20 @@ $^2$ Filmuniversität Babelsberg \emph{KONRAD WOLF}}
 
 
 % =============================================================================
-\begin{frame}{Reproducibility of a Listening Experiment}
+\begin{frame}{Perceptual Study -- Procedure}
 \framesubtitle{1. Idea}
 
-
-\includegraphics[scale=.2]{./figs/Bright-Idea-800px}
+\begin{center}
+\includegraphics[scale=.25]{./figs/Bright-Idea-800px}
+\end{center}
 
 {\tiny from https://openclipart.org/}
 
 \end{frame}
 
 % =============================================================================
-\begin{frame}[noframenumbering]{Reproducibility of a Listening Experiment}
-\framesubtitle{2. Design of Experiment}
+\begin{frame}[noframenumbering]{Perceptual Study -- Procedure}
+\framesubtitle{2. Design of experiment}
 
 \begin{columns}
 \begin{column}{.45\linewidth}
@@ -115,16 +110,18 @@ $^2$ Filmuniversität Babelsberg \emph{KONRAD WOLF}}
 
 
 % =============================================================================
-\begin{frame}[noframenumbering]{Reproducibility of a Listening Experiment}
-\framesubtitle{3. Computation and Implementation}
+\begin{frame}[noframenumbering]{Perceptual Study -- Procedure}
+\framesubtitle{3. Computation and implementation}
 
 \begin{columns}
 \begin{column}{.45\linewidth}
 \begin{itemize}
 \item mathematical derivations
-\item implementation of simulations, signal processing
-\item implementation of control logic, graphical user interface
+\item implementation of simulations,\\ signal processing
+\item implementation of control logic,\\ graphical user interface (GUI)
 \end{itemize}
+
+\vspace{3mm}
 
 \begin{itemize}
 \item numerical simulations
@@ -142,14 +139,14 @@ $^2$ Filmuniversität Babelsberg \emph{KONRAD WOLF}}
 
 
 % =============================================================================
-\begin{frame}[noframenumbering]{Reproducibility of a Listening Experiment}
+\begin{frame}[noframenumbering]{Perceptual Study -- Procedure}
 \framesubtitle{4. Experiment}
 
 \begin{columns}
 \begin{column}{.45\linewidth}
 Illustration of experiment...
 
-Output: raw data
+Output: raw data, protocols
 \end{column}
 %
 \begin{column}{.45\linewidth}
@@ -163,7 +160,7 @@ Output: raw data
 
 
 % =============================================================================
-\begin{frame}[noframenumbering]{Reproducibility of a Listening Experiment}
+\begin{frame}[noframenumbering]{Perceptual Study -- Procedure}
 \framesubtitle{5. Analysis}
 
 \begin{columns}
@@ -190,7 +187,7 @@ Output: processed data
 
 
 % =============================================================================
-\begin{frame}[noframenumbering]{Reproducibility of a Listening Experiment}
+\begin{frame}[noframenumbering]{Perceptual Study -- Procedure}
 \framesubtitle{6. Manuscript}
 
 \begin{columns}
@@ -199,7 +196,6 @@ Output: processed data
 \item text
 \item references
 \item visualization of results (plots)
-\item supplementary material
 \end{itemize}
 \end{column}
 %
@@ -213,8 +209,8 @@ Output: processed data
 \end{frame}
 
 % =============================================================================
-\begin{frame}[noframenumbering]{Reproducibility of a Listening Experiment}
-\framesubtitle{7. Pre-Publication Peer Review}
+\begin{frame}[noframenumbering]{Perceptual Study -- Procedure}
+\framesubtitle{7. Pre-publication peer review}
 
 \begin{columns}
 \begin{column}{.45\linewidth}
@@ -232,12 +228,39 @@ Output: processed data
 \end{frame}
 
 % =============================================================================
-\begin{frame}[noframenumbering]{Reproducibility of a Listening Experiment}
+\begin{frame}[noframenumbering]{Perceptual Study -- Procedure}
 \framesubtitle{8. Publication}
 
 \begin{columns}
 \begin{column}{.45\linewidth}
+\begin{itemize}
+\item text
+\item references
+\item visualization of results (plots)
+\end{itemize}
+\end{column}
+%
+\begin{column}{.45\linewidth}
+
 \includegraphics[page=1,width=120pt]{/Users/spors/Documents/publications/published/DAGA_2015/paper/DAGA2015_WFS_edge_effects.pdf}
+
+\end{column}
+\end{columns}
+
+\end{frame}
+
+% =============================================================================
+\begin{frame}[noframenumbering]{Perceptual Study -- Procedure}
+\framesubtitle{9. Aftermath}
+
+\begin{columns}
+\begin{column}{.45\linewidth}
+\begin{itemize}
+\item reproduction by third parties
+\item post-publication review
+\item errata, code revision
+\item ideas for next study
+\end{itemize}
 \end{column}
 %
 \begin{column}{.45\linewidth}
@@ -248,22 +271,20 @@ Output: processed data
 \end{frame}
 
 % =============================================================================
-\begin{frame}[noframenumbering]{Reproducibility of a Listening Experiment}
-\framesubtitle{9. Aftermath}
+\begin{frame}[noframenumbering]{Perceptual Study -- Procedure}
+\framesubtitle{Overview}
 
-\begin{columns}
-\begin{column}{.45\linewidth}
-\begin{itemize}
-\item reproduction by third parties
-\item post-publication review
-\item errata, code revision
-\end{itemize}
-\end{column}
-%
-\begin{column}{.45\linewidth}
-\OA
-\end{column}
-\end{columns}
+\begin{enumerate}
+\item Idea
+\item Design of experiment
+\item Computation and implementation
+\item Experiment
+\item Analysis
+\item Manuscript
+\item Peer review
+\item Publication
+\item Aftermath
+\end{enumerate}
 
 \end{frame}
 
@@ -280,6 +301,8 @@ Output: processed data
 \item computational
 \begin{itemize}
 \item large-scale simulations
+\hspace{14mm}$\smash{\left.\rule{0pt}{.5\dimexpr3\baselineskip+3\itemsep+2\parskip}\right\}
+      \text{\parbox{2in}{potentially new branch(es)}}}$
 \item data-driven computational science
 \end{itemize}
 \end{enumerate}
@@ -288,9 +311,9 @@ Output: processed data
 
 \textbf{Types of Reproducibility} {\tiny [Stodden 2014a]}
 \begin{itemize}
-\item empirical reproducibility
-\item computational reproducibility
-\item statistical reproducibility
+\item empirical
+\item computational
+\item statistical
 \end{itemize}
 
 \end{frame}
@@ -326,7 +349,7 @@ Output: processed data
 \begin{frame}{Incentives and Barriers}
 \framesubtitle{Selected Results from a Survey of the Machine Learning Community}
 
-\textbf{Barriers}(\data{Data}/Code) {\tiny [Stodden 2010], N=134}
+\textbf{Barriers}(\data{Data}/Code) {\tiny [Stodden 2014], N=134}
 \begin{itemize}
 \item time to document and clean up (\data{54}/77 \%)
 \item dealing with questions from users (\data{34}/52 \%)
@@ -499,7 +522,6 @@ Output: processed data
 \item[{[HRK 2014]}] Hochschulrektorenkonferenz. Management von Forschungsdaten - eine zentrale strategische Herausforderung für Hochschulleitungen, 13.5.2014.
 \item[{[H2020 2016]}] H2020 Programme: Guidelines of FAIR Data Management in Horizon 2020, European Research Commission, 26.7.2016.
 \item[{[Stodden 2009]}] Vitoria Stodden, The Legal Framework for Reproducible Scientific Research, Computing in Science \& Engineering, January/February 2009.
-\item[{[Stodden 2010]}]
 \item[{[Stodden 2014a]}] Victoria Stodden, Resolving Reproducibility in Computational Science: Tools, Policy, and Culture, talk, 8.10.2014.
 \item[{[Stodden 2014b]}] Victoria Stodden and Sheila Miguez, Best Practices for Computational Science: Software Infrastructure and Environments for Reproducible and Extensible Research, Journal of Open Reserach Software, 2(1):e21, pp. 1-6.
 
