@@ -77,129 +77,12 @@ $^2$ Filmuniversität Babelsberg \emph{KONRAD WOLF}}
 
 
 % =============================================================================
-\begin{frame}{Example -- Perceptual Study}
-\framesubtitle{Procedure}
-
-\begin{columns}[T]
-\begin{column}{.41\linewidth}
-
-\begin{enumerate}
-\item<1> Idea
-\item<2> Design of experiment
-\item<3> Computation
-\item<4> Experiment
-\item<5> Analysis
-\item<6> Manuscript
-\item<7> Peer review
-\item<8> Publication
-\item<9> Aftermath
-\end{enumerate}
-\vfill
-
-\end{column}
-%
-\begin{column}{.49\linewidth}
-
-\only<1>{%
-\begin{center}
-\includegraphics[scale=.20]{./figs/Bright-Idea-800px}
-\end{center}
-
-{\tiny \hfill from https://openclipart.org/}
-}
-
-\only<2>{%
-\begin{itemize}
-\item hypothesis
-\item procedure
-\item test subjects
-\item stimuli
-\item ...
-\end{itemize}
-}
-
-\only<3>{%
-\vspace{5mm}
-\begin{itemize}
-\item mathematical derivations
-\item implementation of simulations
-\item numerical simulations
-\item generation of stimuli \\[2ex]
-\item implementation of control logic,\\ graphical user interface (GUI)
-\end{itemize}
-}
-
-\only<4>{%
-\vspace{5mm}
-\begin{center}
-\includegraphics[scale=.13]{experiment}
-\end{center}
-}
-
-\only<5>{%
-\begin{itemize}
-\item anonymization of data
-\item outlier removal
-\item statistical analysis
-\end{itemize}
-
-\textbf{Output:} processed data
-}
-
-\only<6>{%
-\begin{itemize}
-\item text
-\item references
-\item visualization of results (plots)
-\end{itemize}
-
-\begin{center}
-\includegraphics[page=1,scale=.15]{paper}
-\end{center}
-}
-
-\only<7>{%
-\begin{itemize}
-\item ratings, comments
-\item revised manuscript
-\end{itemize}
-}
-
-\only<8>{%
-\begin{itemize}
-\item text
-\item references
-\item visualization of results (plots)
-\item presentation
-\end{itemize}
-
-\begin{center}
-\includegraphics[page=1,scale=.15]{paper}
-\end{center}
-}
-
-\only<9>{%
-\begin{itemize}
-\item reproduction by third parties
-\item post-publication review
-\item errata, code revision
-\item ideas for next study
-\end{itemize}
-}
-
-\end{column}
-\end{columns}
-
-\end{frame}
-
-
-% =============================================================================
 \begin{frame}{The Scientific Method}
 
 \begin{itemize}
 \item systematic observation, measurement, and experiment
 \item formulation, testing, and modification of hypotheses
-\item reproducibility is the ability to duplicate an experiment or study
+\item reproducibility
 \end{itemize}
 
 \vfill
@@ -243,21 +126,21 @@ $^2$ Filmuniversität Babelsberg \emph{KONRAD WOLF}}
 
 % =============================================================================
 \begin{frame}{Example -- Perceptual Study}
-\framesubtitle{Supporting Reproducibility by Open Science}
+\framesubtitle{Procedure}
 
 \begin{columns}[T]
 \begin{column}{.41\linewidth}
 
 \begin{enumerate}
-\item<1> Idea
-\item<2> Design of experiment
-\item<3> Computation
-\item<4> Experiment
-\item<5> Analysis
-\item<6> Manuscript
-\item<7> Peer review
-\item<8> Publication
-\item<9> Aftermath
+\item<1-2> Idea
+\item<3-4> Design of experiment
+\item<5-6> Computation
+\item<7-8> Experiment
+\item<9-10> Analysis
+\item<11-12> Manuscript
+\item<13-14> Peer review
+\item<15-16> Publication
+\item<17-18> Aftermath
 \end{enumerate}
 \vfill
 
@@ -265,23 +148,67 @@ $^2$ Filmuniversität Babelsberg \emph{KONRAD WOLF}}
 %
 \begin{column}{.49\linewidth}
 
-\only<1>{}
+\only<1-2>{%
+\begin{center}
+\includegraphics[scale=.20]{./figs/Bright-Idea-800px}
+\end{center}
 
-\only<2>{%
-\OM
+{\tiny \hfill from https://openclipart.org/}
 }
 
-\only<3>{%
-\OD
-\vspace{5mm}
-\OS
+\only<3-4>{%
+\begin{itemize}
+\item hypothesis
+\item procedure
+\item test subjects
+\item stimuli
+\item ...
+\end{itemize}
 }
 
 \only<4>{%
+\OM
+}
+
+\only<5-6>{%
+\vspace{5mm}
+\begin{itemize}
+\item mathematical derivations
+\item implementation of simulations
+\item numerical simulations
+\item generation of stimuli \\[2ex]
+\item implementation of control logic,\\ graphical user interface (GUI)
+\end{itemize}
+}
+
+\only<6>{%
+\OD
+\vspace{5mm}
+\OS
+}
+
+\only<7-8>{%
+\vspace{5mm}
+\begin{center}
+\includegraphics[scale=.13]{experiment}
+\end{center}
+}
+
+\only<8>{%
 \OD
 }
 
-\only<5>{%
+\only<9-10>{%
+\begin{itemize}
+\item anonymization of data
+\item outlier removal
+\item statistical analysis
+\end{itemize}
+
+\textbf{Output:} processed data
+}
+
+\only<10>{%
 \OM
 \vspace{5mm}
 \OS
@@ -289,15 +216,47 @@ $^2$ Filmuniversität Babelsberg \emph{KONRAD WOLF}}
 \OD
 }
 
-\only<6>{%
+\only<11-12>{%
+\begin{itemize}
+\item text
+\item references
+\item visualization of results (plots)
+\end{itemize}
+
+\begin{center}
+\includegraphics[page=1,scale=.15]{paper}
+\end{center}
+}
+
+\only<12>{%
 \OA
 }
 
-\only<7>{%
+\only<13-14>{%
+\begin{itemize}
+\item ratings, comments
+\item revised manuscript
+\end{itemize}
+}
+
+\only<14>{%
 \OPR
 }
 
-\only<8>{%
+\only<15-16>{%
+\begin{itemize}
+\item text
+\item references
+\item visualization of results (plots)
+\item presentation
+\end{itemize}
+
+\begin{center}
+\includegraphics[page=1,scale=.15]{paper}
+\end{center}
+}
+
+\only<16>{%
 \OA
 \vspace{5mm}
 \OS
@@ -305,13 +264,24 @@ $^2$ Filmuniversität Babelsberg \emph{KONRAD WOLF}}
 \OD
 }
 
-\only<9>{}
+\only<17-18>{%
+\begin{itemize}
+\item reproduction by third parties
+\item post-publication review
+\item errata, code revision
+\item ideas for next study
+\end{itemize}
+}
+
+\only<18>{%
+
+}
+
 
 \end{column}
 \end{columns}
 
 \end{frame}
-
 
 % =============================================================================
 \begin{frame}{Incentives and Barriers}
