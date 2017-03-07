@@ -26,8 +26,8 @@ $^2$ Filmuniversität Babelsberg \emph{KONRAD WOLF}}
 \date[7.3.2017]{Jahrestagung der Deutschen Gesellschaft für Akustik \\ 7.3.2017 \\[4ex] \includegraphics[scale=.5]{CC_BY4png.png}}
 
 % ===== macros =====
-\tikzstyle{box}=[draw=structure.fg!60, fill=structure.fg!50, thick, drop shadow, rounded corners=4pt, minimum width=35mm, minimum height=17mm, anchor=east]
-\tikzstyle{box2}=[draw=structure.fg!60, fill=structure.fg!50, thick, drop shadow, rounded corners=4pt, minimum width=35mm, minimum height=12mm, anchor=east]
+\tikzstyle{box}=[draw=structure.fg!60, fill=structure.fg!50, thick, drop shadow, rounded corners=4pt, minimum width=35mm, minimum height=15mm, anchor=east]
+\tikzstyle{box2}=[draw=none, fill=structure.fg!50, thick, rounded corners=0pt, minimum width=35mm, minimum height=10mm, anchor=east]
 
 \newcommand\data[1]{{\color{structure.fg}#1}}
 
@@ -41,6 +41,7 @@ $^2$ Filmuniversität Babelsberg \emph{KONRAD WOLF}}
 \newcommand\OD{\OSstamp{Open Data}}
 \newcommand\OA{\OSstamp{Open Access}}
 \newcommand\OPR{\OSstamp{Open Peer Review}}
+\newcommand\ONS{\OSstamp{Open Notebook Science}}
 
 
 
@@ -50,31 +51,6 @@ $^2$ Filmuniversität Babelsberg \emph{KONRAD WOLF}}
 \begin{document}
 
 \maketitle
-
-% =============================================================================
-\begin{frame}{Who Should Benefit from my Research?}
-
-\begin{columns}[T]
-\begin{column}{.55\linewidth}
-
-\begin{itemize}
-\item[$\square$] myself
-\item[$\square$] my future self
-\item[$\square$] my colleagues
-\item[$\square$] other researchers
-\item[$\square$] all people in the world
-\item[$\square$] science itself
-\end{itemize}
-
-\end{column}
-%
-\begin{column}{.35\linewidth}
-
-\end{column}
-\end{columns}
-
-\end{frame}
-
 
 % =============================================================================
 \begin{frame}{The Scientific Method}
@@ -106,20 +82,47 @@ $^2$ Filmuniversität Babelsberg \emph{KONRAD WOLF}}
 
 
 % =============================================================================
+\begin{frame}{Who Should Benefit from my Research?}
+
+\begin{columns}[T]
+\begin{column}{.55\linewidth}
+
+\begin{itemize}
+\item[$\square$] myself
+\item[$\square$] my future self
+\item[$\square$] my colleagues
+\item[$\square$] other researchers
+\item[$\square$] all people in the world
+\item[$\square$] science itself
+\end{itemize}
+
+\end{column}
+%
+\begin{column}{.35\linewidth}
+
+\end{column}
+\end{columns}
+
+\end{frame}
+
+
+% =============================================================================
 \begin{frame}{The Elements of Open Science}
 
 
-\begin{tikzpicture}[node distance=5mm and 2mm]
-\node[box] (methodology) {Open Methodology};
-\node[box, right=of methodology] (data) {Open Data};
-\node[box, right=of data] (source) {Open Source};
-\node[box, below=of methodology] (access) {Open Access};
-\node[box, below=of data] (edu) {\shortstack{Open Educational \\ Resources}};
-\node[box, below=of source] (review) {Open Peer Review};
+\begin{tikzpicture}[node distance=4mm and 4mm]
+\node[box] (source) {Open Source};
+\node[box, right=of source] (data) {Open Data};
+\node[box, right=of data] (access) {Open Access};
+\node[box, below=of source] (methodology) {Open Methodology};
+\node[box, below=of data] (notebook) {\shortstack{Open Notebook \\ Science}};
+\node[box, below=of access] (edu) {\shortstack{Open Educational \\ Resources}};
+\node[box, below=of methodology.south east] (review) {Open Peer Review};
+\node[box, below=of edu.south west] (reserach) {\shortstack{Open Research}};
 \end{tikzpicture}
 
 \vspace{2mm}
-{\tiny adapted from \url{https://en.wikipedia.org/wiki/Open_science} and \url{http://openscienceasap.org/open-science}}
+{\tiny compiled from \url{https://en.wikipedia.org/wiki/Open_science} and \url{http://openscienceasap.org/open-science}}
 
 \end{frame}
 
@@ -132,23 +135,23 @@ $^2$ Filmuniversität Babelsberg \emph{KONRAD WOLF}}
 \begin{column}{.41\linewidth}
 
 \begin{enumerate}
-\item<1-2> Idea
-\item<3-4> Design of experiment
-\item<5-6> Computation
-\item<7-8> Experiment
-\item<9-10> Analysis
-\item<11-12> Manuscript
-\item<13-14> Peer review
-\item<15-16> Publication
-\item<17-18> Aftermath
+\item<1> Idea
+\item<2-3> Design of experiment
+\item<4-5> Computation
+\item<6-7> Experiment
+\item<8-9> Analysis
+\item<10-11> Manuscript
+\item<12-13> Peer review
+\item<14-15> Publication
+\item<16> Aftermath
 \end{enumerate}
-\vfill
+\vspace{25mm}
 
 \end{column}
 %
 \begin{column}{.49\linewidth}
 
-\only<1-2>{%
+\only<1>{%
 \begin{center}
 \includegraphics[scale=.20]{./figs/Bright-Idea-800px}
 \end{center}
@@ -156,128 +159,132 @@ $^2$ Filmuniversität Babelsberg \emph{KONRAD WOLF}}
 {\tiny \hfill from https://openclipart.org/}
 }
 
-\only<3-4>{%
+\only<2-3>{%
 \begin{itemize}
 \item hypothesis
 \item procedure
-\item test subjects
 \item stimuli
+\item test subjects
 \item ...
 \end{itemize}
 }
 
-\only<4>{%
+\only<3>{%
+\vspace{2mm}
+\begin{center}
 \OM
+\end{center}
 }
 
-\only<5-6>{%
-\vspace{5mm}
+\only<4-5>{%
 \begin{itemize}
 \item mathematical derivations
-\item implementation of simulations
 \item numerical simulations
 \item generation of stimuli \\[2ex]
-\item implementation of control logic,\\ graphical user interface (GUI)
+\item control logic, GUI
 \end{itemize}
 }
 
-\only<6>{%
+\only<5>{%
+\vspace{2mm}
+\begin{center}
+\ONS
+\vspace{1mm}
 \OD
-\vspace{5mm}
+\vspace{1mm}
 \OS
+\end{center}
 }
 
-\only<7-8>{%
-\vspace{5mm}
+\only<6-7>{%
 \begin{center}
 \includegraphics[scale=.13]{experiment}
 \end{center}
 }
 
-\only<8>{%
+\only<7>{%
+\vspace{2mm}
+\begin{center}
 \OD
+\end{center}
 }
 
-\only<9-10>{%
+\only<8-9>{%
 \begin{itemize}
 \item anonymization of data
 \item outlier removal
 \item statistical analysis
 \end{itemize}
-
-\textbf{Output:} processed data
+%\textbf{Output:} processed data
 }
 
-\only<10>{%
+\only<9>{%
+\vspace{2mm}
+\begin{center}
 \OM
-\vspace{5mm}
+\vspace{2mm}
 \OS
-\vspace{5mm}
+\vspace{2mm}
 \OD
+\end{center}
 }
 
-\only<11-12>{%
+\only<10-11>{%
 \begin{itemize}
 \item text
 \item references
 \item visualization of results (plots)
 \end{itemize}
+}
 
+\only<11>{%
+\vspace{2mm}
 \begin{center}
-\includegraphics[page=1,scale=.15]{paper}
+\OA
 \end{center}
 }
 
-\only<12>{%
-\OA
-}
-
-\only<13-14>{%
+\only<12-13>{%
 \begin{itemize}
 \item ratings, comments
 \item revised manuscript
 \end{itemize}
 }
 
-\only<14>{%
+\only<13>{%
+\vspace{2mm}
+\begin{center}
 \OPR
+\end{center}
 }
 
-\only<15-16>{%
+\only<14-15>{%
 \begin{itemize}
-\item text
-\item references
-\item visualization of results (plots)
+\item manuscript
+\item supplementary materials
 \item presentation
 \end{itemize}
+}
 
+\only<15>{%
+\vspace{2mm}
 \begin{center}
-\includegraphics[page=1,scale=.15]{paper}
+\OA
+\vspace{2mm}
+\OS
+\vspace{2mm}
+\OD
 \end{center}
 }
 
 \only<16>{%
-\OA
-\vspace{5mm}
-\OS
-\vspace{5mm}
-\OD
-}
-
-\only<17-18>{%
 \begin{itemize}
 \item reproduction by third parties
 \item post-publication review
-\item errata, code revision
-\item ideas for next study
+\item errata, code and data revision
+\item ideas for next study...
 \end{itemize}
 }
-
-\only<18>{%
-
-}
-
-
 \end{column}
 \end{columns}
 
@@ -344,15 +351,18 @@ $^2$ Filmuniversität Babelsberg \emph{KONRAD WOLF}}
 
 \vfill
 
-\textbf{Available Licensing Frameworks}
+\textbf{Available licensing frameworks}
 \begin{itemize}
 \item Software: GNU Public License, BSD, MIT, ...
 \item Content: Creative Commons, ...
 \end{itemize}
 
+\vfill
+
 \textbf{Recommendations}
 \begin{itemize}
 \item Reproducible Research Standard (RRS) [Stodden, 2009]
+\item ...
 \end{itemize}
 
 \end{frame}
@@ -363,7 +373,7 @@ $^2$ Filmuniversität Babelsberg \emph{KONRAD WOLF}}
 
 \begin{columns}[T]
 \begin{column}{.45\linewidth}
-\textbf{Generic Repositories}
+\textbf{Generic repositories}
 \begin{itemize}
 \item GitHub
 \item Bitbucket
@@ -371,7 +381,7 @@ $^2$ Filmuniversität Babelsberg \emph{KONRAD WOLF}}
 \end{column}
 %
 \begin{column}{.45\linewidth}
-\textbf{Repositories for Research Data}
+\textbf{Repositories for research data}
 \begin{itemize}
 \item Zenodo
 \item runmycode
