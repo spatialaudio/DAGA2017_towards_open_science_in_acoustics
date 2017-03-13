@@ -1,0 +1,170 @@
+\documentclass[a4paper, 10pt, twocolumn]{article}
+
+\usepackage[utf8]{inputenc}         
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[small,bf]{caption2}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{amsmath, amssymb}
+
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesection}{}{}
+\titleformat{\paragraph}{\normalfont\bfseries}{\theparagraph}{}{}
+\titlespacing{\section}{0pt}{6pt}{-1pt}
+\titlespacing{\subsection}{0pt}{3pt}{-1pt}
+\titlespacing{\paragraph}{0pt}{3pt}{-1pt}
+
+% Definition der Seitenränder
+\addtolength{\textwidth}{2.1cm}
+\addtolength{\topmargin}{-2.4cm}
+\addtolength{\oddsidemargin}{-1.1 cm}
+\addtolength{\textheight}{4.5cm}
+\setlength{\columnsep}{0.7cm}
+
+\pagestyle{empty}                   % weder Kopf- noch Fußzeile auf 1. Seite
+
+
+\date{}                                         % kein Datum auf 1. Seite
+
+\title{\vspace{-8mm}\textbf{\large
+Towards Open Science in Acoustics: Foundations and Best Practices}}
+
+% Hier die Namen und Daten der beteiligten Autoren eintragen
+\author{
+Sascha Spors$^1$, Matthias Geier$^1$ and Hagen Wierstorf$^2$\\
+$^1$ \emph{\small Institute of Communications Engineering, University of Rostock, Germany, Email: sascha.spors@uni-rostock.de}\\
+$^2$ \emph{\small Filmuniversität Babelsberg KONRAD WOLF}} 
+
+
+% ================================================================================
+% ================================================================================
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}           % weder Kopf- noch Fußzeile auf Folgeseiten
+
+% ================================================================================
+\section*{Introduction} \label{sec:intro} 
+
+The reproducibility of results is one of the main principles of the scientific method. 
+The irreproducibility of a wide range of scientific results has recently drawn significant 
+attention. Besides problems in the research methods themselves, results were often not 
+reproducible since necessary supplementary material as protocols, data and implementations 
+were not available. Another issue is the lacking availability of data for further 
+research by third parties. In many cases only the published results are available to 
+other researchers. Open Science focuses on the ease of access and reproducibility of 
+scientific results. This contribution introduces the concept of reproducibility and 
+addresses common concerns. Best practices for Open Science in acoustics research are 
+discussed and illustrated at examples.
+
+
+% ================================================================================
+\section*{The Scientific Method} \label{sec:method}
+
+\begin{itemize}
+\item short intro into the scientific method
+\item the three/four branches according to\cite{Donoho:CSE, Stodden2014:talk}
+\item the problem of reproducibility
+\item one potential countermeasure: open science
+\end{itemize}
+
+Alternative view: who should benefit from my research?
+
+\begin{itemize}
+\item[$\square$] myself
+\item[$\square$] my future self
+\item[$\square$] my colleagues
+\item[$\square$] other researchers
+\item[$\square$] all people in the world
+\item[$\square$] science itself
+\end{itemize}
+
+
+% ================================================================================
+\section*{Open Science} \label{sec:open_science} 
+
+% ................................................................................
+\paragraph*{Elements of Open Science}
+
+The elements of open science \cite{}
+\begin{enumerate}
+\item Open Source
+\item Open (Science) Data
+\item Open Access
+\item Open Methodology
+\item Open Notebook Science
+\item Open Educational Resources
+\item Open Peer Review
+\item Open Research (?)
+\end{enumerate}
+
+% ................................................................................
+\paragraph*{Example}
+
+Perceptual study as example of usage of open science elements:
+
+\begin{enumerate}
+\item Idea
+\item Design of Experiment
+\item Computation
+\item Experiment
+\item Analysis
+\item Manuscript
+\item Pre-Publication Peer Review
+\item Publication
+\item Aftermath
+\end{enumerate}
+
+% ================================================================================
+\section*{Copyright and Licenses} \label{sec:copyright}
+
+
+% ================================================================================
+\section*{Management of Research Data} \label{sec:data_management}
+
+Principles \cite{DFG_GWP:Book,HRK_FDM:WWW,Stodden2014:JORS,H2020_FAIR:ERC}
+\begin{itemize}
+\item develop a comprehensive data management plan
+\item use workflow tracking in the research process
+\item make data findable, accessible, interoperable and reusable (FAIR)
+\item apply open licensing models
+\item offer training and qualification
+\end{itemize}
+
+
+% ================================================================================
+\section*{Conclusions} \label{sec:conclusions} 
+
+% ................................................................................
+\paragraph*{Personal Experience}
+
+% ................................................................................
+\paragraph*{Studies}
+
+\begin{itemize}
+\item studies on benefits of open science/access
+\end{itemize}
+
+% ................................................................................
+\paragraph*{Conclusions}
+
+\begin{itemize}
+\item reproducibility is essential for the scientific method
+\item Open Science by itself does not ensure the ease of reproducibility
+\item institutional evaluation measures contradict scientific innovation
+\item training and qualification required
+\end{itemize}
+
+
+%================================================================================
+% Bibliography
+%================================================================================
+{
+\bibliographystyle{IEEEtran}
+\bibliography{open_science}
+}
+
+
+
+\end{document}
