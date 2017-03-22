@@ -7,6 +7,7 @@
 \usepackage{parskip}
 \usepackage{titlesec}
 \usepackage{amsmath, amssymb}
+\usepackage[multiple]{footmisc}
 
 \titleformat{\section}{\normalfont\large\bfseries}{\thesection}{}{}
 \titleformat{\subsection}{\normalfont\large\bfseries}{\thesection}{}{}
@@ -212,7 +213,8 @@ for open science have been given~\cite{Stodden09:CSE,}.
 The systematic management of research data is an important prerequisite for open and 
 reproducible science. This covers the internal as well as public handling of data, whereas
 the term research data is not restricted to electronic resources. The following principles
-for research data management have been compiled from the recommendations given in~\cite{DFG_GWP:Book,HRK_FDM:WWW,Stodden2014:JORS,H2020_FAIR:ERC}
+for research data management have been compiled from the recommendations given 
+in~\cite{DFG_GWP:Book,HRK_FDM:WWW,Stodden2014:JORS,H2020_FAIR:ERC}
 \begin{itemize}
 \item develop a comprehensive data management plan
 \item use workflow tracking in the research process
@@ -228,7 +230,7 @@ essential cornerstone of an advanced data management strategy. It should highlig
 of data management and should introduce the data management plan as well as the tools used for
 its realization.
 
-Note, the instantiation of appropriate data management measures is already mandatory in a number 
+Note, the instantiation of appropriate data management measures is mandatory in a number 
 of funding schemes.
 
 
@@ -236,25 +238,64 @@ of funding schemes.
 \section*{Conclusions} \label{sec:conclusions} 
 
 % ................................................................................
-\paragraph*{Personal Experience}
+\paragraph*{Empirical Analysis of Open Science}
+
+Open science has been evaluated in a number of empirical studies. This covers the
+actual state with respect to data publications up to the impact of open access 
+publications. The current policy of journals has for instance been evaluated in~\cite{Stodden2013:PLOS1,Alsheikh11:PLOS}. The studies reveal that so far there is 
+no common call for sharing code and data, and that the requirements are rather 
+homogeneous. The offer to deposit underlying data and code is taken only by a minority
+of authors.
+
+The barriers and incentives of open source and data publications accompanying 
+publications have been raised in a questionnaire within the machine learning 
+community~\cite{}.
+
+Various studies have investigated the presumed advantage in terms of citations of
+open access publications, e.g.~\cite{Swan10:study,McCabe14:EI}. An clear advantage 
+could be shown in most cases and no advantage in rare cases.
 
 % ................................................................................
-\paragraph*{Studies}
+\paragraph*{Personal Experience}
 
-\begin{itemize}
-\item studies on benefits of open science/access
-\end{itemize}
+Besides using open toolboxes and datasets our own expertise with open science began 
+with the public release of the SoundScape Renderer (SSR)~\cite{Geier07:DEGA} in 
+2010\footnote{\url{https://github.com/SoundScapeRenderer}}. Since then various software toolboxes, 
+datasets, open access papers and open educational resources have been 
+published\footnote{\url{https://github.com/spatialaudio}}\footnote{\url{https://github.com/sfstoolbox}}. 
+We use Redmine, SVN and git for internal data management. Public releases are mainly
+done on github and referenced by zenodo if required. Challenges were the initial
+effort to get familiar with the workflow and license models. We furthermore did not find
+a convenient solution for version tracking of large databases, for instance room 
+acoustic measurements. A clear benefit is the need for documentation, clean-up and internal
+discussion before releasing data to the public. While this effort seems to be undesirable at
+first glance, it turns out to safe a lot of effort later on. The feedback from the community
+is very positive and a number of bugs have been found. It can be expected that publicity 
+released scientific code and data contains less bugs than we used internally only. 
+
+A common concern often raised by others is the misuse of openly published data by others, 
+for instance for commercial activities. So far we have not seen any misuse of our
+materials and hence cannot confirm this concern.
 
 % ................................................................................
 \paragraph*{Conclusions}
 
-\begin{itemize}
-\item reproducibility is essential for the scientific method
-\item Open Science by itself does not ensure the ease of reproducibility
-\item institutional evaluation measures contradict scientific innovation, attribution
-\item training and qualification required
-\item FAIR policy
-\end{itemize}
+We have introduced the concept of open science and discussed its application in the
+field of acoustics. The reproducibility of results is an essential cornerstone of
+the scientific method. Open science by itself does not ensure the ease of reproducibility of
+published results. For instance the accessibility of code for a numeric simulation without
+proper documentation can be very limited and may lead to irreproducibility of the simulation results. The FAIR policy~\cite{H2020_FAIR:ERC} (\emph{make data findable, accessible, interoperable and reusable}) of the EC is a first step towards quality standards for 
+data publications. Other initiatives define minimum quality standards for data publications 
+or have instantiated a peer-review for the reproducibility of published findings~\cite{}.  
+
+Training and qualification has to be understood as an integral part of research data management and open science. It should convey its foundations as well as common tools and workflows.
+
+The current movement towards open science is still in a phase of development and 
+consolidation. The scientific ecosystem, for instance journals and funding organizations, 
+has taken up the topic in order to improve the management of research data and the reproducibility of scientific findings. However, at the current state most institutional evaluation measures do not account for an engagement in open science. This is strongly 
+linked to the problem of personal attribution when contributing to public developments and datasets. The scientific track record nowadays builds heavily on such measures as 
+citation index and third party funding which potentially contradict the involvement into 
+open science.
 
 
 %================================================================================
@@ -262,9 +303,8 @@ of funding schemes.
 %================================================================================
 {
 \bibliographystyle{IEEEtran}
-\bibliography{open_science}
+\bibliography{open_science,my}
 }
-
 
 
 \end{document}
