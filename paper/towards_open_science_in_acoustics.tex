@@ -50,19 +50,19 @@ $^2$\emph{\small Filmuniversität Babelsberg KONRAD WOLF}}
 
 Before introducing the open science approach in detail its worthwhile to review the
 foundations of the scientific method. It may be referred to  as 
-\emph{'A method of procedure that has characterized natural science since the 17th 
+\emph{`A method of procedure that has characterized natural science since the 17th 
 century, consisting in systematic observation, measurement, and experiment, and the 
 formulation, testing, and modification of hypotheses.'}~\cite{scientific_method:OXD}. 
 Science builds upon a set of well accepted methods which are commonly believed to
 ensure above formulated principles. Besides these, the reproducibility of results is 
 one of the cornerstones of the scientific method. 
-It may be defined as \emph{'Reproducibility is the ability of an entire analysis of 
+It may be defined as \emph{`Reproducibility is the ability of an entire analysis of 
 an experiment or study to be duplicated, either by the same researcher or by someone 
 else working independently, whereas reproducing an experiment is called replicating 
 it.'}~\cite{Leek15:PNAS}. 
 The irreproducibility of a wide range of scientific results has drawn significant 
 attention in the last decade~\cite{Borgwardt:Book,retraction:WWW,ioannidis05:PLOS, open15:AAAS, chalmers09:OG, freedman15:PLOS, howells14:Nature}. 
-In order to track down the problem of irreproducibility the application areas of 
+In order to track down the problem of irreproducibility, the application areas of 
 the scientific method have been classified into three branches by~\cite{Donoho:CSE,Stodden2014:talk}:
 \begin{enumerate}
 \item deductive
@@ -73,7 +73,8 @@ The deductive branch covers results derived e.g. by formal logic and mathematics
 branch e.g. statistical analysis of controlled experiments. The first two are traditional branches, 
 while the last one is considered as a potentially novel branch. It covers results derived by large-scale simulations
 and data-driven computational science. The measures that have to be taken to ensure reproducibilitly
-in the traditional are quite well known. This does not hold for the third, computational, branch.
+in the traditional branches are quite well known. This does not hold for the third, computational, branch. Here
+the main intellectual contributions may be encoded in software only.
 
 Besides problems in the research methods themselves, results are often not reproducible since 
 necessary supplementary material as protocols, data and implementations are not available. In 
@@ -101,7 +102,7 @@ as open as possible to support scientific advancement.
 
 Open science follows the general demand for socialization of knowledge. More specifically, 
 it aims at making the research process transparent on all levels. The advent of scientific 
-journals can be seen as a first step towards openness. Open Science has been discussed on
+journals can be seen as a first step towards openness. Open science has been discussed on
 a broad level in the last decade. However the exact meaning of the term is still not fully 
 settled. Many measures are discussed to achieve transparency in the research process~\cite{Pontika15:ACM,Reproducibility15:AMS,Albagli15:Book,Vrana15:MIPRO,Kraker11:TEL}. 
 We review the most common elements of open science in the following, followed by application 
@@ -170,13 +171,13 @@ experiment itself often a control logic and graphical user interface is implemen
 following \underline{Open Notebook Science}, \underline{Open Data} and \underline{Open Source}.
 %
 \item \textbf{Experiment}\\
-The experiment is conducted in the next step. Here the responses are collected from the test subject potentially 
+The experiment is conducted in the next step. Here the responses are collected from the test subjects potentially 
 together with other data like head orientation. This constitutes raw data which is processed later in the analysis stage. 
 The data can be published as \underline{Open Data} as long as no privacy issues are raised.
 %
 \item \textbf{Analysis}\\
 The statistical analysis of the raw data is the basis of the generalization of the individual results. This may
-involve the anonymization and outlier removal as first steps. The analysis and the processed data can be made 
+involve the anonymization and outlier removal as first steps. The analysis procedure and the processed data can be made 
 transparent using the elements \underline{Open Methodology}, \underline{Open Source} and \underline{Open Data}.
 %
 \item \textbf{Manuscript}\\
@@ -206,19 +207,27 @@ questions may bring up ideas for the next research project.
 % ================================================================================
 \section*{Copyright and Licenses} \label{sec:copyright}
 
-Licenses are an important aspect of open science. Scientific data that is made 
-available to the public has to be accompanied by a clear license statement. Otherwise
-the situation concerning copyright and reuse is unclear. The legal implications are
-rather complex, hard to oversee and country dependent in this case. The community offers
-a wide variety of licensing frameworks which are of use for open science. In general different 
-licenses are used for data, text, images, artwork and code. For the former the family of 
-creative commons (CC) licenses\footnote{\url{https://creativecommons.org}} is a good 
-choice~\cite{Kreuzer14:Book}. For the latter various license models are used, for instance 
-the GNU General Public License (GPL), BSD or MIT License, to name a few.
 
-The chosen license model should be as less restrictive as possible in order to promote the
-re-use. In order to aid in the selection of an appropriate licensing strategy, recommendations
-for open science have been given~\cite{Stodden09:CSE}.
+Licenses are an important aspect of open science. Scientific code and data that is made 
+available to the public should be accompanied by a clear license statement. Otherwise,
+due to copyright laws, re-distribution and re-use is most likely forbidden.
+The exact legal implications are
+rather complex, hard to oversee and depend on the country whose copyright laws apply.
+
+In order to explicitly allow re-distribution and re-use -- under well-defined conditions -- there are
+a variety of licensing frameworks which can be used for open science.
+For text, images, artwork and similar works, the family of 
+creative commons (CC) licenses\footnote{\url{https://creativecommons.org}} is a good choice~\cite{Kreuzer14:Book},
+especially the rather permissive variant CC\,BY and the more restrictive variant CC\,BY\,SA.
+When publishing source code, one of the many available open source licenses should be used.
+Examples are the permissive BSD or MIT licenses and the more restrictive
+GNU General Public License (GPL), just to name a few.
+
+To promote wide-spread legal re-use of research results, a permissive license should be preferred.
+There are even tools which allow authors to waive all their rights,
+as far as legally possible, most notably CC0.
+In order to aid in the selection of an appropriate licensing strategy, recommendations
+for open science have been given for instance in~\cite{Stodden09:CSE}.
 
 
 % ================================================================================
@@ -237,7 +246,7 @@ in~\cite{DFG_GWP:Book,HRK_FDM:WWW,Stodden2014:JORS,H2020_FAIR:ERC}:
 \item offer training and qualification
 \end{itemize}
 The data management plan should document the data raised and processed, its handling and
-archival. The use of workflow tracking (e.g. SVN, git) makes the research process transparent 
+archival. The use of workflow tracking (e.g. Apache Subversion\footnote{\url{https://subversion.apache.org}}, Git\footnote{\url{https://git-scm.com}}) makes the research process transparent 
 and allows to discover for instance the source of problems. The FAIR policy in conjunction with
 open licensing models promotes the re-use of published data. Training and qualification is an
 essential cornerstone of a decent data management strategy. It should highlight the importance
@@ -249,10 +258,7 @@ of funding schemes.
 
 
 % ================================================================================
-\section*{Conclusions} \label{sec:conclusions} 
-
-% ................................................................................
-\paragraph*{Empirical Analysis of Open Science}
+\section*{Empirical Analysis of Open Science} \label{sec:empirical_analysis}
 
 Open science has been evaluated in a number of empirical studies. This covers the
 actual state with respect to data publications up to the impact of open access 
@@ -263,38 +269,41 @@ of authors. However, the situation has improved considerably in the past years.
 
 The barriers and incentives of open source and data publications accompanying 
 scientific publications have been raised in a questionnaire within the machine 
-learning community~\cite{}.
+learning community~\cite{Stodden2014:talk}. The main barrier named was the effort
+for documentation and clean-up, the main incentive the encouragement of scientific
+advancement.
 
 Various studies have investigated the presumed advantage in terms of citations of
 open access publications, e.g.~\cite{Swan10:study,McCabe14:EI}. An clear advantage 
 could be shown in most cases and less to no advantage in rare cases.
 
 
-% ................................................................................
-\paragraph*{Personal Experience}
+% ================================================================================
+\section*{Personal Experience} \label{sec:personal_experience}
 
 Besides using open toolboxes and datasets, our own experience with open science began 
 with the open source release of the SoundScape Renderer (SSR)~\cite{Geier07:DEGA} in 
 2010\footnote{\url{https://github.com/SoundScapeRenderer}}. Since then various software toolboxes, 
 datasets, open access papers and open educational resources have been 
 published\footnote{\url{https://github.com/spatialaudio}}\footnote{\url{https://github.com/sfstoolbox}}. 
-We use Redmine~\footnote{\url{http://www.redmine.org/}}, SVN and Git for internal data management. Public releases are mainly
-available on github and referenced by zenodo\footnote{\url{https://zenodo.org/}} if required. Challenges were the initial
-effort to get familiar with the workflow and license models. We furthermore did not find
-a convenient solution for version tracking of (a high number of) large files, like for instance room 
+We use Redmine\footnote{\url{http://www.redmine.org}}, SVN and Git for internal data management. Public releases are mainly
+available on GitHub\footnote{\url{https://github.com}} and referenced by Zenodo\footnote{\url{https://zenodo.org}}, if required. 
+Challenges were the initial effort to get familiar with the workflow and license models. We furthermore did not find
+a convenient solution for version tracking (of a high number) of large files, like for instance room 
 acoustic measurements. A clear benefit is the need for documentation, clean-up and internal
 discussion before releasing data to the public. While this effort seems to be undesirable at
-first glance, it turns out to safe a lot of work later on. The feedback from the community
-is very positive and a number of bugs have been reported. We expect that our publicity 
-released scientific code and data contains less bugs than if we would have used it 
-internally only. 
+first glance, it turns out to save a lot of work later on. The feedback from the community
+is very positive and a number of bugs have been reported. We expect that our publicly 
+released scientific code and data contain less bugs than if we would have used it 
+only internally.
 
-A common concern often raised by others is the misuse of openly published data by others, 
+A common concern often raised is the misuse of openly published data by others, 
 for instance for commercial activities. So far we have not seen any misuse of our
 materials and hence cannot confirm this concern.
 
-% ................................................................................
-\paragraph*{Conclusions}
+
+% ================================================================================
+\section*{Conclusions} \label{sec:conclusions}
 
 We have introduced the concept of open science and discussed its application in the
 field of acoustics. The reproducibility of results is an essential cornerstone of
@@ -302,9 +311,9 @@ the scientific method. Open science by itself does not ensure the ease of reprod
 published results. For instance the accessibility of code for a numeric simulation without
 proper documentation can be very limited and may lead to irreproducibility of the simulation results. 
 The FAIR policy~\cite{H2020_FAIR:ERC} -- \emph{make data findable, accessible, interoperable and reusable} -- 
-of the European Commission is a first step towards quality standards for 
-data publications. Other initiatives define minimum quality standards for data publications 
-or have instantiated a peer-review for the reproducibility of published findings.  
+of the European Commission is a first step towards quality standards for data publications. 
+Other initiatives define minimum quality standards for data publications~\cite{TOPGuidelines} 
+or have instantiated a peer review for the reproducibility of published findings.
 
 Training and qualification has to be understood as an integral part of research data 
 management and open science. It should convey its foundations as well as common tools 
@@ -317,13 +326,14 @@ reproducibility of scientific findings. However, at the current state most insti
 evaluation measures do not account for an engagement in open science. This is strongly 
 linked to the problem of personal attribution when contributing to open source and open 
 datasets. The scientific track record nowadays builds heavily on such measures as 
-citation index and third party funding which potentially contradict the deep involvement 
+citation index and third party funding which potentially hinder the deep involvement 
 into open science.
 
 %================================================================================
 % Bibliography
 %================================================================================
 {
+\small
 \bibliographystyle{IEEEtran}
 \bibliography{open_science,my}
 }
