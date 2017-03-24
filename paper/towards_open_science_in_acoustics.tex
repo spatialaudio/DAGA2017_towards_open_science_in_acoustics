@@ -50,13 +50,13 @@ $^2$\emph{\small Filmuniversität Babelsberg KONRAD WOLF}}
 
 Before introducing the open science approach in detail its worthwhile to review the
 foundations of the scientific method. It may be referred to  as 
-\emph{'A method of procedure that has characterized natural science since the 17th 
+\emph{`A method of procedure that has characterized natural science since the 17th 
 century, consisting in systematic observation, measurement, and experiment, and the 
 formulation, testing, and modification of hypotheses.'}~\cite{scientific_method:OXD}. 
 Science builds upon a set of well accepted methods which are commonly believed to
 ensure above formulated principles. Besides these, the reproducibility of results is 
 one of the cornerstones of the scientific method. 
-It may be defined as \emph{'Reproducibility is the ability of an entire analysis of 
+It may be defined as \emph{`Reproducibility is the ability of an entire analysis of 
 an experiment or study to be duplicated, either by the same researcher or by someone 
 else working independently, whereas reproducing an experiment is called replicating 
 it.'}~\cite{Leek15:PNAS}. 
@@ -169,7 +169,7 @@ implementation of signal processing, control logic and graphical user interface,
 can be made available following \underline{Open Notebook Science}, \underline{Open Data} and \underline{Open Source}.
 %
 \item \textbf{Experiment}\\
-In the next step the experiment is conducted. Here the responses are collected from the test subject potentially 
+In the next step the experiment is conducted. Here the responses are collected from the test subjects potentially 
 together with other data like head orientation. This constitutes raw data which is processed later in the analysis stage. 
 The data can be published as \underline{Open Data} as long as no privacy issues are raised.
 %
@@ -197,7 +197,7 @@ for publication are \underline{Open Access}, \underline{Open Source} and \underl
 \item \textbf{Aftermath}\\
 After publication, the presented research may be replicated by others. Post-publication
 review will consider the correctness and relevance of the research. Feedback from this
-may require to publish an errata or revise the underlying data and code. Finally open 
+may require to publish errata or revise the underlying data and code. Finally open 
 questions may bring up ideas for the next research project.
 \end{enumerate}
 
@@ -205,19 +205,27 @@ questions may bring up ideas for the next research project.
 % ================================================================================
 \section*{Copyright and Licenses} \label{sec:copyright}
 
-Licenses are an important aspect of open science. Scientific data that is made 
-available to the public has to be accompanied by a clear license statement. Otherwise
-the situation concerning copyright and reuse is unclear. The legal implications are
-rather complex, hard to oversee and country dependent in this case. The community offers
-a wide variety of licensing frameworks which are of use for open science. In general different 
-licenses are used for data, text, images, artwork and code. For the former the family of 
-creative commons (CC) licenses~\cite{CC} is a good choice~\cite{Kreuzer14:Book}. For the
-latter various license models are used, for instance the GNU General Public License (GPL), 
-BSD or MIT License, to name a few.
+Licenses are an important aspect of open science. Scientific code and data that is made 
+available to the public should be accompanied by a clear license statement. Otherwise,
+due to copyright laws, re-distribution and re-use is most likely forbidden.
+The exact legal implications are
+rather complex, hard to oversee and depend on the country whose copyright laws apply.
 
-The chosen license model should be as less restrictive as possible in order to promote the
-re-use. In order to aid in the selection of an appropriate licensing strategy, recommendations
+In order to explicitly allow re-distribution and re-use -- under well-defined conditions -- there are
+a variety of licensing frameworks which can be used for open science.
+For text, images, artwork and similar works, the family of 
+creative commons (CC) licenses~\cite{CC} is a good choice~\cite{Kreuzer14:Book},
+especially the rather permissive variant CC\,BY and the more restrictive variant CC\,BY\,SA.
+When publishing source code, one of the many available open source licenses should be used.
+Examples are the permissive BSD or MIT licenses and the more restrictive
+GNU General Public License (GPL), just to name a few.
+
+To promote wide-spread legal re-use of research results, a permissive license should be preferred.
+There are even tools which allow authors to waive all their rights,
+as far as legally possible, most notably CC0.
+In order to aid in the selection of an appropriate licensing strategy, recommendations
 for open science have been given~\cite{Stodden09:CSE,}.
+
 
 
 % ================================================================================
@@ -236,7 +244,7 @@ in~\cite{DFG_GWP:Book,HRK_FDM:WWW,Stodden2014:JORS,H2020_FAIR:ERC}:
 \item offer training and qualification
 \end{itemize}
 The data management plan should document the data raised and processed, its handling and
-archival. The use of workflow tracking (e.g. SVN, git) makes the research process transparent 
+archival. The use of workflow tracking (e.g. SVN, Git) makes the research process transparent 
 and allows to discover for instance the source of problems. The FAIR policy in conjunction with
 open licensing models promotes the re-use of published data. Training and qualification is an
 essential cornerstone of a decent data management strategy. It should highlight the importance
@@ -274,16 +282,15 @@ with the open source release of the SoundScape Renderer (SSR)~\cite{Geier07:DEGA
 2010\footnote{\url{https://github.com/SoundScapeRenderer}}. Since then various software toolboxes, 
 datasets, open access papers and open educational resources have been 
 published\footnote{\url{https://github.com/spatialaudio}}\footnote{\url{https://github.com/sfstoolbox}}. 
-We use Redmine\footnote{\url{http://www.redmine.org/}}, SVN and git for internal data management. Public releases are mainly
-available on github and referenced by zenodo\footnote{\url{https://zenodo.org/}} if required. Challenges were the initial
-effort to get familiar with the workflow and license models. We furthermore did not find
+We use Redmine~\footnote{\url{http://www.redmine.org/}}, SVN and Git for internal data management. Public releases are mainly
+available on GitHub and referenced by zenodo\footnote{\url{https://zenodo.org/}} if required. Challenges were the initial effort to get familiar with the workflow and license models. We furthermore did not find
 a convenient solution for version tracking of large databases, for instance room 
 acoustic measurements. A clear benefit is the need for documentation, clean-up and internal
 discussion before releasing data to the public. While this effort seems to be undesirable at
-first glance, it turns out to safe a lot of work later on. The feedback from the community
-is very positive and a number of bugs have been reported. We expect that our publicity 
-released scientific code and data contains less bugs than if we would have used it 
-internally only. 
+first glance, it turns out to save a lot of work later on. The feedback from the community
+is very positive and a number of bugs have been reported. We expect that our publicly 
+released scientific code and data contain less bugs than if we would have used it 
+only internally. 
 
 A common concern often raised by others is the misuse of openly published data by others, 
 for instance for commercial activities. So far we have not seen any misuse of our
